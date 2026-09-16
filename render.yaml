@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: bytevault-imposter-files
+    runtime: node
+    plan: free
+    buildCommand: npm ci
+    startCommand: npm start
+    envVars:
+      - key: ADMIN_KEY
+        sync: false
